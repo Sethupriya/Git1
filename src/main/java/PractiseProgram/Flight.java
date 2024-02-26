@@ -22,6 +22,7 @@ public class Flight {
         actions.moveByOffset(200, 100).click().build().perform();
         WebElement from = driver.findElement(By.xpath("//span[text()='From']/following-sibling::p"));
         //Boolean from_check = from.isEnabled();
+
         from.click();
         driver.findElement(By.xpath("//span[text()='From']/following-sibling::input")).sendKeys("MAA"+Keys.ENTER);
        List<WebElement> from_dd=driver.findElements(By.xpath("//ul[@id='autoSuggest-list']/li/descendant::div[3]/p/span[1]"));
